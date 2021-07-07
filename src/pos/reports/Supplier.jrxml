@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-06T22:40:16 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_3" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d5a748ba-d035-4241-b255-7cd9d4f3458f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Bookshop Data Adapter"/>
+	<parameter name="supplierid" class="java.lang.String"/>
+	<parameter name="suppliername" class="java.lang.String"/>
+	<parameter name="companyname" class="java.lang.String"/>
+	<parameter name="Address" class="java.lang.String"/>
+	<parameter name="Contact" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * From supplier]]>
+	</queryString>
+	<field name="SID" class="java.lang.String"/>
+	<field name="Supplier_Name" class="java.lang.String"/>
+	<field name="CompanyName" class="java.lang.String"/>
+	<field name="Contact" class="java.lang.String"/>
+	<field name="Address" class="java.lang.String"/>
+	<field name="Fax" class="java.lang.String"/>
+	<field name="Email" class="java.lang.String"/>
+	<group name="SID">
+		<groupExpression><![CDATA[$F{SID}]]></groupExpression>
+	</group>
+	<group name="Supplier_Name">
+		<groupExpression><![CDATA[$F{Supplier_Name}]]></groupExpression>
+	</group>
+	<group name="CompanyName">
+		<groupExpression><![CDATA[$F{CompanyName}]]></groupExpression>
+	</group>
+	<group name="Contact">
+		<groupExpression><![CDATA[$F{Contact}]]></groupExpression>
+	</group>
+	<group name="Address">
+		<groupExpression><![CDATA[$F{Address}]]></groupExpression>
+	</group>
+	<group name="Fax">
+		<groupExpression><![CDATA[$F{Fax}]]></groupExpression>
+	</group>
+	<group name="Email">
+		<groupExpression><![CDATA[$F{Email}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="210" y="10" width="170" height="30" uuid="11e4fa8a-da4c-4885-a994-9302c2a5070a"/>
+				<textElement>
+					<font fontName="Calibri" size="16"/>
+				</textElement>
+				<text><![CDATA[Sarasi Bookshop]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="470" y="10" width="100" height="30" uuid="ceb00130-c3b4-4b02-8a77-3feb02718af8"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="6" y="13" width="100" height="30" uuid="3fc553ac-b053-469f-9d80-826df8d079a6"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="213" splitType="Stretch">
+			<textField>
+				<reportElement x="23" y="15" width="100" height="30" uuid="bc9f3138-43f1-454f-89b5-6d17a77f3622"/>
+				<textFieldExpression><![CDATA["Supplier ID"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="23" y="52" width="100" height="30" uuid="cf304175-48e1-43a3-844c-d497cd5448b2"/>
+				<textFieldExpression><![CDATA["Name"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="23" y="90" width="100" height="30" uuid="4b91c113-f9ca-412c-a27b-f207dad13c16"/>
+				<textFieldExpression><![CDATA["Company Name"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="23" y="130" width="100" height="30" uuid="f6fe8a77-fbe2-4d54-9ffb-967857c68ffb"/>
+				<textFieldExpression><![CDATA["Address"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="23" y="170" width="100" height="30" uuid="22203c78-a613-4480-9c09-9a0597514bb5"/>
+				<textFieldExpression><![CDATA["Contact"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="10" width="100" height="30" uuid="337dc7e9-6f83-4ad2-a3f0-36ce9eabab6e"/>
+				<textFieldExpression><![CDATA[$P{supplierid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="45" width="100" height="30" uuid="ce5c9011-3722-441a-9315-a31ce49dfc96"/>
+				<textFieldExpression><![CDATA[$P{suppliername}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="80" width="100" height="30" uuid="dc3aac62-0e1b-4400-865f-ae345ae6c0a4"/>
+				<textFieldExpression><![CDATA[$P{companyname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="120" width="100" height="30" uuid="070a7635-ef33-4738-9567-501045c1704a"/>
+				<textFieldExpression><![CDATA[$P{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="160" width="100" height="30" uuid="79b63e5c-9e57-4601-a62a-2b5ace678641"/>
+				<textFieldExpression><![CDATA[$P{Contact}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="220" y="10" width="150" height="30" uuid="be1b5b9e-e98c-43c9-85cc-91e1bd2c99e6"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Thanks for choosing us]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>

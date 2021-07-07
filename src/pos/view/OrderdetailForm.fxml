@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="959.0" prefWidth="1276.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pos.controller.OrderDetailController">
+   <children>
+      <AnchorPane layoutX="-2.0" prefHeight="91.0" prefWidth="1365.0" style="-fx-background-color: #8deed9;">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="87.0" onMouseClicked="#bookform" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/123.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="253.0" layoutY="2.0" onMouseClicked="#customerform" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/344.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="84.0" fitWidth="71.0" layoutX="468.0" layoutY="2.0" onMouseClicked="#supplierform" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/supplier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="68.0" fitWidth="64.0" layoutX="704.0" onMouseClicked="#orderform" pickOnBounds="true">
+               <image>
+                  <Image url="@../assests/img-order.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="75.0" fitWidth="71.0" layoutX="905.0" onMouseClicked="#orderdetailform" pickOnBounds="true">
+               <image>
+                  <Image url="@../assests/details-icon-png-13.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="68.0" fitWidth="87.0" layoutX="1082.0" onMouseClicked="#bookreturnform" pickOnBounds="true">
+               <image>
+                  <Image url="@../assests/274-2743840_book-returns-policy-returns-icon.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="75.0" fitWidth="79.0" layoutX="1286.0" layoutY="5.0" onMouseClicked="#homeform" pickOnBounds="true">
+               <image>
+                  <Image url="@../assests/home-512.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="869.0" fitWidth="1365.0" layoutX="-1.0" layoutY="91.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/124452.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="508.0" layoutY="98.0" prefHeight="53.0" prefWidth="377.0" style="-fx-background-color: #67ea7f;" text="                OrderDetail" textFill="#011414">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtOrderID" focusColor="#0a0a0a" labelFloat="true" layoutX="62.0" layoutY="208.0" onAction="#loadAllReservation" prefHeight="30.0" prefWidth="384.0" promptText="Order ID" style="-fx-background-color: #f5fbfb;" unFocusColor="#f1ebeb">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblorderdetail" layoutX="359.0" layoutY="380.0" prefHeight="188.0" prefWidth="655.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Order ID" />
+          <TableColumn prefWidth="75.0" text="Order Date" />
+            <TableColumn prefWidth="122.0" text="Customer ID" />
+            <TableColumn prefWidth="146.0" text="Customer Name" />
+            <TableColumn prefWidth="138.0" text="Net Value" />
+            <TableColumn prefWidth="113.0" text="Book ID" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btngeneratereports" layoutX="1113.0" layoutY="643.0" onAction="#generatereports" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #eabd06;" text="Generate pos.reports">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
